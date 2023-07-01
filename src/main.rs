@@ -1,9 +1,13 @@
 use polars::prelude::*;
 
+
 fn main() {
-    // read csv data into a polars dataframe 
-    let df = CsvReader::from_path("/Users/dylanhennessy/projects/polars-hentesting/appleStock.csv").unwrap().finish().unwrap();
+    // read csv data into a polars dataframe and output it to the console
+    let df = CsvReader::from_path("./appleStock.csv").unwrap().finish().unwrap();
     println!("{}",df);
+
+    //let df = CsvReader::from_path("./appleStock.csv").unwrap().finish().unwrap();
+
 
 
 
